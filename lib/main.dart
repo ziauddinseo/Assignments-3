@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
       
       home: Scaffold(
         backgroundColor: Color(0xff00BCD1),
-        appBar: AppBar(title: Center(child: Text("Log In")),),
+        appBar: AppBar(
+          backgroundColor: Colors.black45,
+          title: Center(child: Text("Log In")),),
   body: SingleChildScrollView(
       child: Center(
       child: Column(
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
                         
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blueAccent,
+                        color: Colors.black45,
                       ),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
                       decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blueAccent,
+                        color: Colors.black45,
                       ),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -61,7 +63,23 @@ class MyApp extends StatelessWidget {
   ), 
    
                   SizedBox(height:15,),
-          ElevatedButton(onPressed: (){}, child: Text("Log In"))
+
+
+                  Container(
+            // Child: backgroundColor: Colors.black45,
+
+            
+           width: 125,
+         child: ElevatedButton(
+           style: ElevatedButton.styleFrom(
+    primary: Colors.black45, // background
+    onPrimary: Colors.white, // foreground
+  ),
+           onPressed: (){}, child: Text("Log In"))
+    
+  ), 
+
+          
           
           
         ]
